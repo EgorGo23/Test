@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main {
+    height: 100%;
+    width: 50%;
+    min-width: 100px;
+    padding: 10px;
+    border: 2px solid black
+}
+
+.info {
+    
+}
+
+.patientLists {
+    
+}
+
+.label-info {
+    background-color: lightskyblue;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    font-size: x-large;
+}
