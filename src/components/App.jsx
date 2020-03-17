@@ -6,7 +6,7 @@ import PatientLists from './PatientLists';
 class App extends Component {
     render() {
         return (
-            <div className="wrapper">
+            <div className="content">
                 <Info />
                 <PatientLists />
             </div>

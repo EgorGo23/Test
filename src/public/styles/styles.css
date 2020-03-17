@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+
 }
 
-.wrapper {
+/**General**/
+.content {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -16,23 +17,89 @@
     height: 100%;
     width: 50%;
     min-width: 100px;
-    padding: 10px;
-    border: 2px solid black
+    padding: 15px 5px;
 }
 
-.info {
-    
+.wrapper {
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
 }
 
-.patientLists {
-    
-}
-
+/**Info**/
 .label-info {
-    background-color: lightskyblue;
+    background-color: rgb(62, 170, 236);
     color: #fff;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 15px;
     font-size: x-large;
+}
+
+.label-info > span {
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+}
+
+.table-info {
+    height: 110px;
+    width: 260px;
+    border-collapse: collapse;
+    font-size: large;
+}
+
+.table-info th {
+    text-align: left;
+    font-weight: normal;
+    width: 15%;
+}
+
+.table-info td {
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+    padding-left: 5px;
+}
+
+
+/**Patient List**/
+.nav {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.nav-link:visited {
+    color: #000;
+}
+
+.link-label {
+    font-size: medium;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+.table-list {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    
+}
+
+.table-list tr {
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+}
+
+.table-list th {
+    font-weight: normal;
+    width: 30%;
+    opacity: 0.4;
+    padding: 10px 0;
+    padding-left: 7px;
 }
