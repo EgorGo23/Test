@@ -6,10 +6,18 @@ class PresentList extends Component {
     }
 
     render() {
-        const { list } = this.props;
-
-        const renderBodyTable = (props) => {
-            if (list) {
+        const presentState = this.props.presentState;
+        
+        const renderPresentTable = ({ isLoaded, error, list }) => {
+            if (error) {
+                return (
+                    <div></div>
+                );
+            } else if (!isLoaded) {
+                return (
+                    <div>Загрузка...</div>
+                );
+            } else {
                 return (
                     <table className="table-list present-table">
                         <thead>
@@ -20,26 +28,20 @@ class PresentList extends Component {
                             </tr>
                         </thead>
                         <tbody>
-                            {list.map(({ historyNumber, firstName, lastName, patrName, birthDate, diagnosis, bednumber }) => (
+                            {list.map(({ historyNumber, firstName, lastName, bedNumber }) => (
                                 <tr key={historyNumber}>
                                     <td>{historyNumber}</td>
                                     <td>{`${firstName} ${lastName}`}</td>
-                                    <td>{bednumber}</td>
+                                    <td>{bedNumber}</td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 )
-            } else { 
-                return (
-                    <div className="load">
-                        ...Загрузка
-                    </div>
-                )
             }
         }
 
-        return renderBodyTable(list);
+        return renderPresentTable(presentState);
     }
 }
 

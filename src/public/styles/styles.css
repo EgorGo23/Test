@@ -85,11 +85,15 @@
     padding: 10px 15px;
 }
 
+.lists {
+    max-height: 790px;
+    overflow-y: auto;
+}
+
 .table-list {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
-    
 }
 
 .table-list tr {
@@ -100,6 +104,11 @@
     font-weight: normal;
     width: 30%;
     opacity: 0.4;
+    padding: 10px 0;
+    padding-left: 7px;
+}
+
+.table-list td {
     padding: 10px 0;
     padding-left: 7px;
 }
