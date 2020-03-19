@@ -5,6 +5,10 @@ class PresentList extends Component {
         super(props);
     }
 
+    clickHandler = () => {
+        console.log('hi')
+    }
+
     render() {
         const presentState = this.props.presentState;
         
@@ -29,7 +33,7 @@ class PresentList extends Component {
                         </thead>
                         <tbody>
                             {list.map(({ historyNumber, firstName, lastName, bedNumber }) => (
-                                <tr key={historyNumber}>
+                                <tr key={historyNumber} onClick={this.clickHandler}>
                                     <td>{historyNumber}</td>
                                     <td>{`${firstName} ${lastName}`}</td>
                                     <td>{bedNumber}</td>

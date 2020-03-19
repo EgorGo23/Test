@@ -73,16 +73,19 @@
 
 .nav-link {
     text-decoration: none;
-}
-
-.nav-link:visited {
+    padding: 18px 15px;
     color: #000;
 }
 
 .link-label {
     font-size: medium;
     text-transform: uppercase;
-    padding: 10px 15px;
+    
+}
+
+.active {
+    color: rgb(62, 170, 236);
+    border-bottom: 1px solid rgb(62, 170, 236);
 }
 
 .lists {
