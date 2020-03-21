@@ -73,8 +73,9 @@ class PatientLists extends Component {
     }
 
     render() {
-        const { present, quitting, activeList } = this.state;
-
+        const { present, quitting } = this.state;
+        const { updateCurrentDataInfo } = this.props;
+        
         const renderLinkPresent = (present) => {
             if(present.error) {
                 return <NavLink exact to="/" className="nav-link"><span className="link-label">Присутствуют()</span></NavLink>
@@ -106,10 +107,10 @@ class PatientLists extends Component {
                         <div className="lists">
                             <Switch>
                                 <Route path={"/"} exact>
-                                    <PresentList presentState={present} />
+                                    <PresentList presentState={present} updateCurrentDataInfo={updateCurrentDataInfo} />
                                 </Route>
                                 <Route path={"/quitting"}>
-                                    <QuittingList quittingState={quitting} />
+                                    <QuittingList quittingState={quitting} updateCurrentDataInfo={updateCurrentDataInfo} />
                                 </Route>
                             </Switch>
                         </div>
